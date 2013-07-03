@@ -4,17 +4,12 @@
 
 int main(void) {
   pid_t pid;
-  int i = 15;
 
   pid = fork();
-  pid = fork();
-
-  i++;
-
-  printf("i is %d\n", i);
 
   if (pid == 0) {
     printf("This is the child and the pid is %d\n", pid);
+    execl("/bin/ls", "ls", NULL);
     exit(0);
   }
 
