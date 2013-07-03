@@ -12,10 +12,12 @@ int main(void) {
 
   printf("i is %d\n", i);
 
-//  if (pid == 0) {
-//    printf("This is the child\n");
-//    exit(0);
-//  }
+  if (pid == 0) {
+    printf("This is the child\n");
+    exit(0);
+  }
+
+  printf("This is the parent\n");
 
   sleep(1);
   return 0;
