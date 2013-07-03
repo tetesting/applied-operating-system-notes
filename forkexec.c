@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int main(void) {
   pid_t pid;
+
   pid = fork();
+
   if (pid == 0) {
     printf("This is the child\n");
-  } else {
-    sleep(1);
-    printf("This is the parent\n");
+    exit(0);
   }
-  printf("I am in main and my PID is %d\n", pid);
-  printf("This is both\n");
+
   sleep(1);
   return 0;
 }
