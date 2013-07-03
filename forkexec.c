@@ -9,7 +9,7 @@ int main(void) {
 
   if (pid == 0) {
     printf("This is the child and the pid is %d\n", pid);
-    execl("/bin/ls", "ls", NULL);
+    execl("/bin/ls", "ls", "/", NULL);
     exit(0);
   }
 
