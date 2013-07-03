@@ -7,6 +7,7 @@ int main(void) {
   if (pid == 0) {
     printf("This is the child\n");
   } else {
+    sleep(1);
     printf("This is the parent\n");
   }
   printf("I am in main and my PID is %d\n", pid);
