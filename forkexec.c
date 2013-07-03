@@ -4,13 +4,18 @@
 
 int main(void) {
   pid_t pid;
+  int i = 15;
 
   pid = fork();
 
-  if (pid == 0) {
-    printf("This is the child\n");
-    exit(0);
-  }
+  i++;
+
+  printf("i is %d\n", i);
+
+//  if (pid == 0) {
+//    printf("This is the child\n");
+//    exit(0);
+//  }
 
   sleep(1);
   return 0;
