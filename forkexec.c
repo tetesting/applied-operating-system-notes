@@ -7,17 +7,19 @@ int main(void) {
   int i = 15;
 
   pid = fork();
+  pid = fork();
 
   i++;
 
   printf("i is %d\n", i);
 
   if (pid == 0) {
-    printf("This is the child\n");
+    printf("This is the child and the pid is %d\n", pid);
     exit(0);
   }
 
-  printf("This is the parent\n");
+  //sleep(1);
+  printf("This is the parent and the pid is %d\n", pid);
 
   sleep(1);
   return 0;
