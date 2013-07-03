@@ -9,7 +9,9 @@ int main(void) {
 
   if (pid == 0) {
     printf("This is the child and the pid is %d\n", pid);
-    execl("/bin/ls", "ls", "/", NULL);
+    execl("/bin/ls", "ls", "-l", "/", NULL);
+    // nothing from this point on will be executed
+    printf("I should never be executed\n");
     exit(0);
   }
 
